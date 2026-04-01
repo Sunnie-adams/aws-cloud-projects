@@ -5,8 +5,17 @@
 **Date Completed:** April 2026
 
 ---
+"A mental model overview for both projects.
+
+Project 1 is all about storage and delivery. Think of Amazon S3 as a hard drive in the cloud. You put your website files in it. But instead of letting anyone access that hard drive directly, you put a bouncer in front called CloudFront. CloudFront is a Content Delivery Network — it caches your files at over 400 locations around the world, so when someone in Tokyo visits your site, they're not waiting for a server in Virginia to respond. They get it from Tokyo. Instantly.
+
+The clever part is that we're going to make the S3 bucket completely private. Not even a direct URL will work. The only way to reach your files is through CloudFront. That's called Origin Access Control, and it's a security pattern every cloud engineer should know.
+
+Project 2 is about networking and compute. We build a Virtual Private Cloud — your own isolated network inside AWS. Inside that network, we run a Linux server with Nginx, add an SSL certificate so the site runs on HTTPS, and then we protect the whole thing with a Load Balancer and Auto Scaling Group. The servers are completely hidden from the internet. They can't be reached directly. Period.
 
 ## Project 1 — High Availability Static Site
+Architecture
+<img width="279" height="220" alt="Project 1 High Availability Static Site Architecture" src="https://github.com/user-attachments/assets/3bca371b-8ed7-4d72-b34f-1b16eba00d03" />
 
 ### Screenshot 1 — S3 Bucket Created (Private)
 ![S3 Bucket]<img width="923" height="373" alt="Screenshot 1 — S3 Bucket Created (Private)" src="https://github.com/user-attachments/assets/d484f46f-1d4d-4794-b838-782ef3500740" />
@@ -20,7 +29,8 @@ This is industry best practice and closes a common security gap.
 ---
 
 ### Screenshot 2 — CloudFront Distribution Enabled
-![CloudFront Distribution](cloudfront-distribution.png)
+
+<img width="936" height="370" alt="Screenshot 2 — CloudFront Distribution Enabled" src="https://github.com/user-attachments/assets/736d60bc-80b6-4037-b9c0-e54088f59a72" />
 
 **What it shows:** The CloudFront distribution in Enabled status with the 
 domain name visible.  
@@ -50,9 +60,12 @@ can bypass CloudFront and access files directly. This is the OAC in action.
 ---
 
 ## Project 2 — The Fortress Web Server
+Architecture
+<img width="288" height="235" alt="Project 2 Fortress Webserver Architecture" src="https://github.com/user-attachments/assets/1a0a6850-9014-4a86-8141-cbeb740d4d12" />
 
 ### Screenshot 5 — Custom VPC Created
-![VPC Created](vpc-created.png)
+
+<img width="913" height="330" alt="Screenshot 5 — Custom VPC Created" src="https://github.com/user-attachments/assets/7487b363-cdc3-42c1-9f63-e67d15604ef8" />
 
 **What it shows:** The fortress-vpc with public and private subnets across 
 2 Availability Zones, Internet Gateway and NAT Gateway attached.  
@@ -63,7 +76,8 @@ Balancer in the public subnet is exposed.
 ---
 
 ### Screenshot 6 — Security Groups Configured
-![Security Groups](security-groups.png)
+
+<img width="930" height="420" alt="Screenshot 6 — Security Groups Configured" src="https://github.com/user-attachments/assets/f77f510d-3a9f-48bb-a00f-ea92967212a1" />
 
 **What it shows:** Two security groups — alb-sg and webserver-sg — with 
 their inbound rules visible.  
@@ -74,7 +88,8 @@ This is how real enterprises protect their servers.
 ---
 
 ### Screenshot 7 — EC2 Instance Running with Nginx
-![EC2 Running](ec2-running.png)
+
+<img width="913" height="363" alt="Screenshot 7 — EC2 Instance Running with Nginx" src="https://github.com/user-attachments/assets/9a79b757-559d-4ca8-95d8-cf8d66423c49" />
 
 **What it shows:** The fortress-server EC2 instance in Running state with 
 3/3 status checks passed.  
@@ -84,7 +99,7 @@ with Nginx installed automatically via User Data script on first boot.
 ---
 
 ### Screenshot 8 — Nginx Welcome Page in Browser
-![Nginx Live](nginx-welcome.png)
+<img width="582" height="319" alt="Screenshot 8 — Nginx Welcome Page in Browser" src="https://github.com/user-attachments/assets/41483a11-90a8-483a-8053-81bd4de90a80" />
 
 **What it shows:** The Nginx welcome page loading in the browser via the 
 EC2 public IP address.  
@@ -93,9 +108,9 @@ accessible. Proves the VPC routing, Internet Gateway and security group
 rules are all configured correctly.
 
 ---
-
 ### Screenshot 9 — Application Load Balancer Active
-![ALB Active](alb-active.png)
+
+<img width="921" height="362" alt="Screenshot 9 — Application Load Balancer Active" src="https://github.com/user-attachments/assets/90414f72-d426-4ff8-8a36-f6b4f3c7b2b6" />
 
 **What it shows:** The fortress-alb Application Load Balancer in Active 
 state with its DNS name visible.  
@@ -104,9 +119,9 @@ across multiple servers. All inbound traffic goes through the ALB —
 servers are never directly exposed to the internet.
 
 ---
-
 ### Screenshot 10 — Target Group Healthy
-![Target Group](target-group-healthy.png)
+
+<img width="863" height="362" alt="Screenshot 10 — Target Group Healthy" src="https://github.com/user-attachments/assets/c885092c-7f9f-4380-a2a2-e2ede620ea44" />
 
 **What it shows:** The fortress-tg target group showing the EC2 instance 
 as Healthy.  
@@ -115,9 +130,9 @@ as Healthy.
 and getting valid responses back.
 
 ---
-
 ### Screenshot 11 — Auto Scaling Group Running
-![Auto Scaling](auto-scaling-group.png)
+<img width="904" height="341" alt="Screenshot 11 — Auto Scaling Group Running" src="https://github.com/user-attachments/assets/0a2cde6e-db8c-4195-a788-1a1a8e242c71" />
+
 
 **What it shows:** The fortress-asg Auto Scaling Group with minimum 2, 
 desired 2, maximum 4 instances configured and running.  
@@ -128,7 +143,8 @@ If traffic spikes the ASG adds servers. Zero manual intervention required.
 ---
 
 ### Screenshot 12 — Site Loading Through ALB
-![Site via ALB](site-via-alb.png)
+
+<img width="595" height="234" alt="Screenshot 12 — Site Loading Through ALB" src="https://github.com/user-attachments/assets/fcfebb1d-f049-4e0f-8dd6-d31d8605a836" />
 
 **What it shows:** The Nginx page loading in browser via the ALB DNS name 
 instead of the direct EC2 IP.  

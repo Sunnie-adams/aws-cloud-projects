@@ -9,7 +9,7 @@
 ## Project 1 — High Availability Static Site
 
 ### Screenshot 1 — S3 Bucket Created (Private)
-![S3 Bucket](s3-bucket.png)
+![S3 Bucket](Screenshoot/Screenshot 1 — S3 Bucket Created (Private).PNG)
 
 **What it shows:** The S3 bucket created with Block all public access turned ON.  
 **Why it matters:** The bucket is completely private — no direct URL access. 

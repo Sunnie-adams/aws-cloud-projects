@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Engr. Sunday Adams Omale — Cloud Engineer & AWS Specialist. Something powerful is launching soon." />
+  <title>Coming Soon — Engr. Sunday Adams Omale</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Animated grid background -->
+  <div class="bg-grid"></div>
+  <!-- Glowing orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <!-- Scan line overlay -->
+  <div class="scanlines"></div>
+
+  <div class="wrapper">
+
+    <!-- ── TOP NAV ── -->
+    <header class="nav">
+      <div class="nav-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">SAO</span>
+        <span class="logo-bracket">]</span>
+      </div>
+      <div class="nav-badge">
+        <span class="status-dot"></span>
+        AWS Certified Cloud Engineer
+      </div>
+    </header>
+
+    <!-- ── HERO ── -->
+    <main class="hero">
+
+      <div class="hero-tag">
+        <span class="tag-line"></span>
+        <span class="tag-text">// initializing_systems...</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line title-line--1">Something</span>
+        <span class="title-line title-line--2">Powerful<em>.</em></span>
+        <span class="title-line title-line--3">Coming <span class="highlight">Soon</span></span>
+      </h1>
+
+      <p class="hero-sub">
+        Cloud infrastructure built to scale, secured to enterprise standards,<br />
+        and delivered at global speed — launching soon.
+      </p>
+
+      <!-- Countdown timer -->
+      <div class="countdown" id="countdown">
+        <div class="count-unit">
+          <span class="count-num" id="days">00</span>
+          <span class="count-label">Days</span>
+        </div>
+        <div class="count-sep">:</div>
+        <div class="count-unit">
+          <span class="count-num" id="hours">00</span>
+          <span class="count-label">Hours</span>
+        </div>
+        <div class="count-sep">:</div>
+        <div class="count-unit">
+          <span class="count-num" id="minutes">00</span>
+          <span class="count-label">Mins</span>
+        </div>
+        <div class="count-sep">:</div>
+        <div class="count-unit">
+          <span class="count-num" id="seconds">00</span>
+          <span class="count-label">Secs</span>
+        </div>
+      </div>
+
+      <!-- Email notify form -->
+      <form class="notify-form" onsubmit="handleSubmit(event)">
+        <div class="form-inner">
+          <input
+            type="email"
+            class="notify-input"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="notify-btn">
+            <span class="btn-text">Notify Me</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+        <p class="form-note">No spam. Just the launch announcement.</p>
+        <p class="form-success" id="form-success">✓ You're on the list. See you at launch!</p>
+      </form>
+
+    </main>
+
+    <!-- ── TECH STACK TICKER ── -->
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <span>AWS S3</span><span class="sep">◆</span>
+        <span>CloudFront CDN</span><span class="sep">◆</span>
+        <span>VPC Architecture</span><span class="sep">◆</span>
+        <span>EC2 &amp; Auto Scaling</span><span class="sep">◆</span>
+        <span>Application Load Balancer</span><span class="sep">◆</span>
+        <span>SSL / TLS Security</span><span class="sep">◆</span>
+        <span>Route 53 DNS</span><span class="sep">◆</span>
+        <span>IAM &amp; Security Groups</span><span class="sep">◆</span>
+        <span>Infrastructure as Code</span><span class="sep">◆</span>
+        <span>High Availability Design</span><span class="sep">◆</span>
+        <!-- Duplicate for seamless loop -->
+        <span>AWS S3</span><span class="sep">◆</span>
+        <span>CloudFront CDN</span><span class="sep">◆</span>
+        <span>VPC Architecture</span><span class="sep">◆</span>
+        <span>EC2 &amp; Auto Scaling</span><span class="sep">◆</span>
+        <span>Application Load Balancer</span><span class="sep">◆</span>
+        <span>SSL / TLS Security</span><span class="sep">◆</span>
+        <span>Route 53 DNS</span><span class="sep">◆</span>
+        <span>IAM &amp; Security Groups</span><span class="sep">◆</span>
+        <span>Infrastructure as Code</span><span class="sep">◆</span>
+        <span>High Availability Design</span><span class="sep">◆</span>
+      </div>
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+      <div class="footer-name">
+        <span class="footer-eng">Engr.</span> Sunday Adams Omale
+      </div>
+      <div class="footer-links">
+        <a href="mailto:hello@sundayadams.dev" class="footer-link">Email</a>
+        <span class="foot-sep">·</span>
+        <a href="https://linkedin.com/in/sunday-adams-omale" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+        <span class="foot-sep">·</span>
+        <a href="https://github.com/sunday-adams-omale" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+      </div>
+      <p class="footer-copy">Hosted on AWS S3 + CloudFront &nbsp;·&nbsp; © 2025 Engr. Sunday Adams Omale</p>
+    </footer>
+
+  </div><!-- /wrapper -->
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

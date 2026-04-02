@@ -199,7 +199,7 @@ aws s3 cp style.css s3://my-portfolio-2024/
 #### Step 7 — Test Your Site
 
 - Wait ~10 minutes for CloudFront to deploy
-- Visit your CloudFront URL: `https://d1234abcd.cloudfront.net`
+- Visit your CloudFront URL: `https://d1um9xjttzmmpf.cloudfront.net/`
 - ✅ Your site is live worldwide!
 
 #### Step 8 (Optional) — Custom Domain

@@ -1,4 +1,4 @@
-# 📸 Project Screenshots — Proof of Work
+# Project Proof of Work
 
 **Author:** Engr. Sunday Adams Omale  
 **Project:** My First Project — AWS Cloud Engineering  

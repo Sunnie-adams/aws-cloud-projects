@@ -652,7 +652,8 @@ not from the US origin. Result: instant loading worldwide.
 ---
 
 ### Live Website on CloudFront URL
-(cloudfront-live-site.png)
+<img width="640" height="472" alt="Screenshot 3 — Live Website on CloudFront URL" src="https://github.com/user-attachments/assets/d429d099-e4eb-4de4-8964-b94046f03fe1" />
+
 
 **What it shows:** The coming soon page loading live in the browser via 
 the CloudFront domain name.  
@@ -662,7 +663,6 @@ securely through CloudFront with HTTPS enforced and OAC protecting the bucket.
 ---
 
 ### S3 Direct URL Returns 403 Forbidden
-(s3-access-denied.png)
 
 **What it shows:** Attempting to access the raw S3 URL returns 403 Forbidden.  
 **Why it matters:** This CONFIRMS the security is working correctly. Nobody 

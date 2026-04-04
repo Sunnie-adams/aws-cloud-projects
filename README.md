@@ -628,8 +628,8 @@ Wait 2-5 minutes for DNS propagation, then visit `https://yourdomain.com` ✅
 Architecture
 <img width="279" height="220" alt="Project 1 High Availability Static Site Architecture" src="https://github.com/user-attachments/assets/3bca371b-8ed7-4d72-b34f-1b16eba00d03" />
 
-### Screenshot 1 — S3 Bucket Created (Private)
-![S3 Bucket]<img width="923" height="373" alt="Screenshot 1 — S3 Bucket Created (Private)" src="https://github.com/user-attachments/assets/d484f46f-1d4d-4794-b838-782ef3500740" />
+### S3 Bucket Created (Private)
+<img width="923" height="373" alt="Screenshot 1 — S3 Bucket Created (Private)" src="https://github.com/user-attachments/assets/d484f46f-1d4d-4794-b838-782ef3500740" />
 
 
 **What it shows:** The S3 bucket created with Block all public access turned ON.  
@@ -639,7 +639,7 @@ This is industry best practice and closes a common security gap.
 
 ---
 
-### Screenshot 2 — CloudFront Distribution Enabled
+### CloudFront Distribution Enabled
 
 <img width="936" height="370" alt="Screenshot 2 — CloudFront Distribution Enabled" src="https://github.com/user-attachments/assets/736d60bc-80b6-4037-b9c0-e54088f59a72" />
 
@@ -651,7 +651,7 @@ not from the US origin. Result: instant loading worldwide.
 
 ---
 
-### Screenshot 3 — Live Website on CloudFront URL
+### Live Website on CloudFront URL
 ![Live Website](cloudfront-live-site.png)
 
 **What it shows:** The coming soon page loading live in the browser via 
@@ -661,7 +661,7 @@ securely through CloudFront with HTTPS enforced and OAC protecting the bucket.
 
 ---
 
-### Screenshot 4 — S3 Direct URL Returns 403 Forbidden
+### S3 Direct URL Returns 403 Forbidden
 ![S3 403](s3-access-denied.png)
 
 **What it shows:** Attempting to access the raw S3 URL returns 403 Forbidden.  
@@ -674,7 +674,7 @@ can bypass CloudFront and access files directly. This is the OAC in action.
 Architecture
 <img width="288" height="235" alt="Project 2 Fortress Webserver Architecture" src="https://github.com/user-attachments/assets/1a0a6850-9014-4a86-8141-cbeb740d4d12" />
 
-### Screenshot 5 — Custom VPC Created
+### Custom VPC Created
 
 <img width="913" height="330" alt="Screenshot 5 — Custom VPC Created" src="https://github.com/user-attachments/assets/7487b363-cdc3-42c1-9f63-e67d15604ef8" />
 
@@ -686,7 +686,7 @@ Balancer in the public subnet is exposed.
 
 ---
 
-### Screenshot 6 — Security Groups Configured
+### Security Groups Configured
 
 <img width="930" height="420" alt="Screenshot 6 — Security Groups Configured" src="https://github.com/user-attachments/assets/f77f510d-3a9f-48bb-a00f-ea92967212a1" />
 
@@ -698,7 +698,7 @@ This is how real enterprises protect their servers.
 
 ---
 
-### Screenshot 7 — EC2 Instance Running with Nginx
+### EC2 Instance Running with Nginx
 
 <img width="913" height="363" alt="Screenshot 7 — EC2 Instance Running with Nginx" src="https://github.com/user-attachments/assets/9a79b757-559d-4ca8-95d8-cf8d66423c49" />
 
@@ -709,7 +709,7 @@ with Nginx installed automatically via User Data script on first boot.
 
 ---
 
-### Screenshot 8 — Nginx Welcome Page in Browser
+### Nginx Welcome Page in Browser
 <img width="582" height="319" alt="Screenshot 8 — Nginx Welcome Page in Browser" src="https://github.com/user-attachments/assets/41483a11-90a8-483a-8053-81bd4de90a80" />
 
 **What it shows:** The Nginx welcome page loading in the browser via the 
@@ -719,7 +719,7 @@ accessible. Proves the VPC routing, Internet Gateway and security group
 rules are all configured correctly.
 
 ---
-### Screenshot 9 — Application Load Balancer Active
+### Application Load Balancer Active
 
 <img width="921" height="362" alt="Screenshot 9 — Application Load Balancer Active" src="https://github.com/user-attachments/assets/90414f72-d426-4ff8-8a36-f6b4f3c7b2b6" />
 
@@ -730,7 +730,7 @@ across multiple servers. All inbound traffic goes through the ALB —
 servers are never directly exposed to the internet.
 
 ---
-### Screenshot 10 — Target Group Healthy
+### Target Group Healthy
 
 <img width="863" height="362" alt="Screenshot 10 — Target Group Healthy" src="https://github.com/user-attachments/assets/c885092c-7f9f-4380-a2a2-e2ede620ea44" />
 
@@ -741,7 +741,7 @@ as Healthy.
 and getting valid responses back.
 
 ---
-### Screenshot 11 — Auto Scaling Group Running
+### Auto Scaling Group Running
 <img width="904" height="341" alt="Screenshot 11 — Auto Scaling Group Running" src="https://github.com/user-attachments/assets/0a2cde6e-db8c-4195-a788-1a1a8e242c71" />
 
 
@@ -753,7 +753,7 @@ If traffic spikes the ASG adds servers. Zero manual intervention required.
 
 ---
 
-### Screenshot 12 — Site Loading Through ALB
+### Site Loading Through ALB
 
 <img width="595" height="234" alt="Screenshot 12 — Site Loading Through ALB" src="https://github.com/user-attachments/assets/fcfebb1d-f049-4e0f-8dd6-d31d8605a836" />
 

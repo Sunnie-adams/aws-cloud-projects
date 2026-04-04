@@ -625,7 +625,7 @@ Wait 2-5 minutes for DNS propagation, then visit `https://yourdomain.com` ✅
 *Star ⭐ this repo if it helped you!*
 
 ## Project 1 — High Availability Static Site
-Architecture
+
 <img width="279" height="220" alt="Project 1 High Availability Static Site Architecture" src="https://github.com/user-attachments/assets/3bca371b-8ed7-4d72-b34f-1b16eba00d03" />
 
 ### S3 Bucket Created (Private)
@@ -652,7 +652,7 @@ not from the US origin. Result: instant loading worldwide.
 ---
 
 ### Live Website on CloudFront URL
-![Live Website](cloudfront-live-site.png)
+(cloudfront-live-site.png)
 
 **What it shows:** The coming soon page loading live in the browser via 
 the CloudFront domain name.  
@@ -662,7 +662,7 @@ securely through CloudFront with HTTPS enforced and OAC protecting the bucket.
 ---
 
 ### S3 Direct URL Returns 403 Forbidden
-![S3 403](s3-access-denied.png)
+(s3-access-denied.png)
 
 **What it shows:** Attempting to access the raw S3 URL returns 403 Forbidden.  
 **Why it matters:** This CONFIRMS the security is working correctly. Nobody 
@@ -671,7 +671,6 @@ can bypass CloudFront and access files directly. This is the OAC in action.
 ---
 
 ## Project 2 — The Fortress Web Server
-Architecture
 <img width="288" height="235" alt="Project 2 Fortress Webserver Architecture" src="https://github.com/user-attachments/assets/1a0a6850-9014-4a86-8141-cbeb740d4d12" />
 
 ### Custom VPC Created

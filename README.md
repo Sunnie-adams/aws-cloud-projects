@@ -1,7 +1,7 @@
 # Project Proof of Work
 
 **Author:** Engr. Sunday Adams Omale  
-**Project:** My First Project — AWS Cloud Engineering  
+**Project:** High-availability-static-site-and-Fortress-web-server  
 **Date Completed:** April 2026
 
 ---
